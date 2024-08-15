@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Calculator</title>
+{% endblock %}
+
+{% block content %}
+<div class="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-80 dark:bg-gray-800">
+        <h1 class="text-2xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">Calculator</h1>
+        <input type="text" id="inputField" class="w-full h-12 text-right p-2 mb-4 text-xl border border-gray-300 rounded dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" disabled>
+
+        <div class="grid grid-cols-4 gap-2">
+            <!-- Calculator Buttons -->
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 7 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>7</button>
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 8 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>8</button>
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 9 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>9</button>
+            <button class="p-4 bg-blue-500 text-white rounded text-xl dark:bg-blue-600" hx-post="{% url 'stringbutton' 'divide' %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>/</button>
+
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 4 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>4</button>
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 5 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>5</button>
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 6 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>6</button>
+            <button class="p-4 bg-blue-500 text-white rounded text-xl dark:bg-blue-600" hx-post="{% url 'stringbutton' '*' %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>*</button>
+
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 1 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>1</button>
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 2 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>2</button>
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 3 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>3</button>
+            <button class="p-4 bg-blue-500 text-white rounded text-xl dark:bg-blue-600" hx-post="{% url 'stringbutton' '-' %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>-</button>
+
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 0 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>0</button>
+            <button class="p-4 bg-gray-200 rounded text-xl dark:bg-gray-700 dark:text-gray-200" hx-post="{% url 'button' 123 %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>.</button>
+            <button class="p-4 bg-green-500 text-white rounded text-xl dark:bg-green-600" hx-post="{% url 'solve' %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>=</button>
+            <button class="p-4 bg-blue-500 text-white rounded text-xl dark:bg-blue-600" hx-post="{% url 'stringbutton' '+' %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>+</button>
+
+            <button class="p-4 col-span-4 bg-red-500 text-white rounded text-xl dark:bg-red-600" hx-post="{% url 'delete' %}" hx-swap="outerHTML" hx-target="#inputField" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>C</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
