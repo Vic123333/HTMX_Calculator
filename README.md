@@ -21,8 +21,3 @@ To set up the project locally, follow these steps:
 4. **runserver**
    ```bash
    python manage.py runserver
-
-   
-
-
-
