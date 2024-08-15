@@ -18,6 +18,8 @@ To set up the project locally, follow these steps:
 2. **Python  migrate**
    ```bash
    python manage.py migrate
+   python manage.py makemigrations
+
 4. **runserver**
    ```bash
    python manage.py runserver
