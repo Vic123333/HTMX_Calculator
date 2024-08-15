@@ -6,7 +6,6 @@ A simple calculator web application built using Django and HTMX.
 
 - Basic arithmetic operations: addition, subtraction, multiplication, division
 - Decimal point handling
-- Clear input field functionality
 
 ## Installation
 
@@ -15,4 +14,15 @@ To set up the project locally, follow these steps:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/repositoryname.git
+   git clone https://github.com/Vic123333/HTMX_Calculator
+2. **Python  migrate**
+   ```bash
+   python manage.py migrate
+4. **runserver**
+   ```bash
+   python manage.py runserver
+
+   
+
+
+
