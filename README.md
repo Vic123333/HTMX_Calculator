@@ -1,6 +1,6 @@
 # HTMX Calculator
 
-A simple calculator web application built using Django and HTMX. This application supports basic arithmetic operations and provides a user-friendly interface for performing calculations.
+A simple calculator web application built using Django and HTMX. 
 
 ## Features
 
