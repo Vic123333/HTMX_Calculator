@@ -8,7 +8,7 @@ A simple calculator web application built using Django and HTMX.
 - Decimal point handling
 
 ## Screenshots
-![Pomodoro Timer Screenshot](./screenshot.PNG)
+![HTMX_Calculator](./screenshot.PNG)
 
 ## Installation
 
