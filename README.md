@@ -7,6 +7,9 @@ A simple calculator web application built using Django and HTMX.
 - Basic arithmetic operations: addition, subtraction, multiplication, division
 - Decimal point handling
 
+## Screenshots
+![Pomodoro Timer Screenshot](./screenshot.PNG)
+
 ## Installation
 
 To set up the project locally, follow these steps:
